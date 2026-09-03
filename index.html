@@ -254,6 +254,37 @@
     margin-top:18px;
   }
 
+  .testimonial-nav{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-top:18px;
+  }
+
+  .testimonial-nav button{
+    width:40px; height:40px;
+    border-radius:50%;
+    border:1.5px solid var(--line);
+    background:#fff;
+    color:var(--ink);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background .15s ease, border-color .15s ease;
+  }
+
+  .testimonial-nav button:hover{
+    background:var(--cream-deep);
+    border-color:var(--teal);
+  }
+
+  .testimonial-nav button svg{width:18px; height:18px;}
+
+  @media (hover:none){
+    .testimonial-nav{display:none;}
+  }
+
   /* ---------- final cta section ---------- */
   .final-cta{
     padding:100px 0 96px;
@@ -508,14 +539,22 @@
   <div class="glow" aria-hidden="true"></div>
   <div class="wrap testimonials-inner" style="max-width:840px;">
     <h2>What clients are saying</h2>
-    <div class="testimonial-track">
+    <div class="testimonial-track" id="testimonialTrack">
       <img src="testimonial-1.png" alt="Client testimonial from Jana N. about working with Karen Seltz">
       <img src="testimonial-2.png" alt="Client testimonial from Bronwen O. about working with Karen Seltz">
       <img src="testimonial-3.png" alt="Client testimonial from Michelle V. about working with Karen Seltz">
       <img src="testimonial-4.png" alt="Client testimonial from Kristen L. about working with Karen Seltz">
       <img src="testimonial-5.png" alt="Client testimonial from Tabitha about working with Karen Seltz">
     </div>
-    <p class="testimonial-hint">Swipe to see more →</p>
+    <p class="testimonial-hint">Scroll or use the arrows to see more</p>
+    <div class="testimonial-nav">
+      <button type="button" id="testimonialPrev" aria-label="Previous testimonial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button type="button" id="testimonialNext" aria-label="Next testimonial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
   </div>
 </section>
 
@@ -617,6 +656,25 @@
     document.addEventListener('keydown', function(e){
       if(e.key === 'Escape'){ closeModal(); }
     });
+  })();
+</script>
+
+<script>
+  (function(){
+    var track = document.getElementById('testimonialTrack');
+    var prevBtn = document.getElementById('testimonialPrev');
+    var nextBtn = document.getElementById('testimonialNext');
+    if(!track || !prevBtn || !nextBtn) return;
+
+    function scrollByCard(direction){
+      var card = track.querySelector('img');
+      var gap = 20;
+      var distance = (card ? card.offsetWidth : 300) + gap;
+      track.scrollBy({ left: distance * direction, behavior: 'smooth' });
+    }
+
+    prevBtn.addEventListener('click', function(){ scrollByCard(-1); });
+    nextBtn.addEventListener('click', function(){ scrollByCard(1); });
   })();
 </script>
 

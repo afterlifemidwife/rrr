@@ -584,7 +584,7 @@
 
     <div id="mc_embed_signup">
       <form action="https://whispersofgodlive.us17.list-manage.com/subscribe/post?u=c12a1c94a9adc8c53ce37cc00&amp;id=4f45027273&amp;f_id=004d4ae2f0"
-            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="mc-hidden-iframe">
 
         <h2>Get Priority Access Before It Opens to Everyone Else</h2>
         <p class="modal-required"><span class="ast">*</span> indicates required</p>
@@ -616,6 +616,8 @@
         <p class="modal-reassure">No spam ever. You'll get one email to confirm, then you're on the list.</p>
       </form>
     </div>
+
+    <iframe name="mc-hidden-iframe" style="display:none;" title="hidden"></iframe>
   </div>
 </div>
 
@@ -675,6 +677,21 @@
 
     prevBtn.addEventListener('click', function(){ scrollByCard(-1); });
     nextBtn.addEventListener('click', function(){ scrollByCard(1); });
+  })();
+</script>
+
+<script>
+  (function(){
+    var form = document.getElementById('mc-embedded-subscribe-form');
+    if(!form) return;
+
+    form.addEventListener('submit', function(){
+      // native browser validation already blocked this if email/name were invalid,
+      // so if we're here, the form is valid and submitting to the hidden iframe
+      setTimeout(function(){
+        window.location.href = 'thank-you.html';
+      }, 400);
+    });
   })();
 </script>
 

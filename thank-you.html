@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're on the list! | Reboot, Rise, & Receive</title>
+<meta name="description" content="You're on the priority waitlist for Reboot, Rise, & Receive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf8f3;
+    --ink:#142440;
+    --ink-soft:#324260;
+    --teal-deep:#0f5f5a;
+    --teal:#1fa69b;
+    --teal-light:#7fe0d3;
+    --gold:#e7b562;
+    --muted:#5c6773;
+    --line:rgba(20,36,64,0.12);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    line-height:1.15;
+    color:var(--ink);
+  }
+
+  .wrap{
+    max-width:520px;
+    text-align:center;
+    position:relative;
+  }
+
+  .glow{
+    position:absolute;
+    width:420px; height:420px;
+    top:-140px; left:50%;
+    transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(127,224,211,0.5), rgba(127,224,211,0) 70%);
+    filter:blur(70px);
+    z-index:0;
+  }
+
+  .content{position:relative; z-index:1;}
+
+  .mark{
+    width:80px;
+    height:80px;
+    margin:0 auto 28px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--teal), var(--teal-deep));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .mark svg{width:36px; height:36px; color:#fff;}
+
+  .eyebrow{
+    font-size:14px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--teal-deep);
+    font-weight:700;
+    margin-bottom:14px;
+  }
+
+  h1{
+    font-size:clamp(28px, 4.4vw, 38px);
+    margin-bottom:18px;
+  }
+
+  p{
+    font-size:16.5px;
+    color:var(--ink-soft);
+    margin-bottom:16px;
+  }
+
+  .note{
+    font-size:14px;
+    color:var(--muted);
+    margin-top:28px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+
+  .footer-legal{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:40px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="content">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+
+    <p class="eyebrow">You're on the list</p>
+    <h1>One more step to confirm your spot.</h1>
+    <p>Check your inbox for an email from Karen asking you to confirm your subscription. Click the link inside, and you'll officially have priority access to Reboot, Rise, &amp; Receive.</p>
+    <p>Don't see it in a minute or two? Check your spam or promotions folder, it happens.</p>
+
+    <p class="note">No spam, ever. You'll only hear from us about the program and when spots open.</p>
+
+    <p class="footer-legal">© 2026 Karen Seltz. All rights reserved.</p>
+  </div>
+</div>
+
+</body>
+</html>

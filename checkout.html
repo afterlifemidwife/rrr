@@ -331,7 +331,7 @@
   .faq-item p{font-size:16px; margin-bottom:0;}
 
   /* ---------- testimonials ---------- */
-  .testimonials-inner{max-width:900px; margin:0 auto;}
+  .testimonials-inner{max-width:640px; margin:0 auto;}
   .testimonial-track{
     display:flex;
     gap:20px;
@@ -342,19 +342,27 @@
   }
   .testimonial-track img{
     scroll-snap-align:center;
-    flex:0 0 auto;
-    width:min(78vw, 340px);
+    flex:0 0 100%;
+    width:100%;
+    max-width:600px;
     border-radius:16px;
     box-shadow:0 18px 40px -18px rgba(20,36,64,0.28);
+    cursor:zoom-in;
+  }
+  .testimonial-counter{
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    margin-top:14px;
   }
   .testimonial-nav{
     display:flex;
     justify-content:center;
     gap:14px;
-    margin-top:18px;
+    margin-top:14px;
   }
   .testimonial-nav button{
-    width:40px; height:40px;
+    width:48px; height:48px;
     border-radius:50%;
     border:1.5px solid var(--line);
     background:#fff;
@@ -365,8 +373,26 @@
     justify-content:center;
   }
   .testimonial-nav button:hover{border-color:var(--teal);}
-  .testimonial-nav button svg{width:18px; height:18px;}
-  @media (hover:none){.testimonial-nav{display:none;}}
+  .testimonial-nav button svg{width:20px; height:20px;}
+
+  /* ---------- testimonial lightbox ---------- */
+  .lightbox{
+    position:fixed; inset:0;
+    background:rgba(20,36,64,0.92);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    z-index:100;
+    cursor:zoom-out;
+  }
+  .lightbox.active{display:flex;}
+  .lightbox img{
+    max-width:min(94vw, 720px);
+    max-height:90vh;
+    border-radius:12px;
+    box-shadow:0 30px 70px -20px rgba(0,0,0,0.5);
+  }
 
   /* ---------- footer ---------- */
   footer{
@@ -635,9 +661,14 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
       </div>
+      <p class="testimonial-counter" id="testimonialCounter">1 of 5 &middot; tap to enlarge</p>
     </div>
   </div>
 </section>
+
+<div class="lightbox" id="testimonialLightbox">
+  <img id="lightboxImg" src="" alt="Enlarged testimonial">
+</div>
 
 <!-- ================= INVESTMENT ================= -->
 <section class="band-ink" style="text-align:center;">
@@ -731,15 +762,45 @@
     var track = document.getElementById('testimonialTrack');
     var prevBtn = document.getElementById('testimonialPrev');
     var nextBtn = document.getElementById('testimonialNext');
+    var counter = document.getElementById('testimonialCounter');
+    var lightbox = document.getElementById('testimonialLightbox');
+    var lightboxImg = document.getElementById('lightboxImg');
     if(!track || !prevBtn || !nextBtn) return;
+    var imgs = track.querySelectorAll('img');
+    var total = imgs.length;
+
+    function currentIndex(){
+      var scrollLeft = track.scrollLeft;
+      var width = track.clientWidth;
+      return Math.round(scrollLeft / width);
+    }
+    function updateCounter(){
+      if(counter) counter.textContent = (currentIndex() + 1) + ' of ' + total + ' · tap to enlarge';
+    }
     function scrollByCard(direction){
-      var card = track.querySelector('img');
-      var gap = 20;
-      var distance = (card ? card.offsetWidth : 300) + gap;
+      var distance = track.clientWidth;
       track.scrollBy({ left: distance * direction, behavior: 'smooth' });
     }
     prevBtn.addEventListener('click', function(){ scrollByCard(-1); });
     nextBtn.addEventListener('click', function(){ scrollByCard(1); });
+    track.addEventListener('scroll', function(){
+      window.clearTimeout(track._scrollTimer);
+      track._scrollTimer = window.setTimeout(updateCounter, 100);
+    });
+
+    imgs.forEach(function(img){
+      img.addEventListener('click', function(){
+        if(!lightbox || !lightboxImg) return;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+    if(lightbox){
+      lightbox.addEventListener('click', function(){
+        lightbox.classList.remove('active');
+      });
+    }
   })();
 </script>
 

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reboot, Rise & Receive | Karen Seltz</title>
-<meta name="description" content="A step-by-step process to clear the subconscious blocks keeping you invisible, undercharging, and waiting for permission.">
+<meta name="description" content="A 6-week group program to clear the subconscious blocks keeping you invisible, undercharging, and waiting for permission.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -55,10 +55,22 @@
 
   section{padding:64px 0;}
 
+  /* ---------- urgency banner ---------- */
+  .urgency-banner{
+    background:var(--ink);
+    color:#fff;
+    text-align:center;
+    padding:12px 20px;
+    font-size:14.5px;
+    font-weight:600;
+    letter-spacing:0.01em;
+  }
+  .urgency-banner strong{color:var(--teal-light);}
+
   /* ---------- hero ---------- */
   .hero{
     position:relative;
-    padding:72px 0 56px;
+    padding:56px 0 48px;
     text-align:center;
     overflow:hidden;
   }
@@ -89,6 +101,25 @@
     color:var(--ink-soft);
   }
   .hero .lede strong{color:var(--teal-deep);}
+
+  .short-testimonial{
+    max-width:520px;
+    margin:36px auto 0;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .short-testimonial p{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:18px;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .short-testimonial span{
+    font-size:14px;
+    color:var(--muted);
+    font-weight:600;
+  }
 
   /* ---------- CTA button ---------- */
   .btn{
@@ -188,31 +219,116 @@
   }
   .band-ink .pull-quote{color:var(--teal-light);}
 
-  /* ---------- placeholder blocks (need real content) ---------- */
-  .todo{
-    border:2px dashed var(--gold);
-    background:rgba(231,181,98,0.08);
+  /* ---------- program phases ---------- */
+  .phase-card{
+    background:rgba(255,255,255,0.6);
+    border:1px solid var(--line);
     border-radius:16px;
-    padding:32px;
-    margin:32px auto;
+    padding:28px;
+    margin-bottom:20px;
     text-align:left;
   }
-  .todo .todo-label{
+  .phase-card .phase-label{
     display:inline-block;
     font-family:'Manrope', sans-serif;
     font-weight:800;
     font-size:12px;
-    letter-spacing:0.06em;
+    letter-spacing:0.08em;
     text-transform:uppercase;
-    color:#966a1f;
-    background:rgba(231,181,98,0.25);
-    padding:4px 10px;
-    border-radius:6px;
-    margin-bottom:14px;
+    color:var(--teal-deep);
+    margin-bottom:10px;
   }
-  .todo h3{font-size:20px; margin-bottom:10px;}
-  .todo p{font-size:16px; margin-bottom:10px;}
-  .todo ul{margin:0 0 10px 20px; color:var(--ink-soft); font-size:16px;}
+  .phase-card h3{font-size:21px; margin-bottom:10px;}
+  .phase-card p{font-size:16.5px; margin-bottom:0;}
+
+  /* ---------- included list ---------- */
+  .included-list{list-style:none; margin:28px 0; text-align:left;}
+  .included-list li{
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    font-size:17px;
+    color:var(--ink-soft);
+  }
+  .included-list li:last-child{border-bottom:none;}
+  .included-list .mark{
+    flex-shrink:0;
+    width:20px; height:20px;
+    margin-top:2px;
+    color:var(--teal-deep);
+  }
+
+  /* ---------- fit lists ---------- */
+  .fit-block{
+    border-radius:16px;
+    padding:28px;
+    margin-bottom:20px;
+    text-align:left;
+  }
+  .fit-yes{background:rgba(31,166,155,0.08); border:1px solid rgba(31,166,155,0.3);}
+  .fit-no{background:rgba(179,73,47,0.06); border:1px solid rgba(179,73,47,0.22);}
+  .fit-block h3{font-size:18px; margin-bottom:14px;}
+  .fit-yes h3{color:var(--teal-deep);}
+  .fit-no h3{color:var(--danger);}
+  .fit-block ul{list-style:none;}
+  .fit-block li{
+    padding:8px 0 8px 26px;
+    position:relative;
+    font-size:16px;
+    color:var(--ink-soft);
+  }
+  .fit-block li:before{
+    position:absolute; left:0; top:8px;
+    font-weight:800;
+  }
+  .fit-yes li:before{content:"\2713"; color:var(--teal-deep);}
+  .fit-no li:before{content:"\2715"; color:var(--danger);}
+
+  /* ---------- investment ---------- */
+  .price-compare{
+    text-align:center;
+    margin:32px 0;
+  }
+  .price-was{
+    font-size:16px;
+    color:#8b96a8;
+    text-decoration:line-through;
+    display:block;
+    margin-bottom:4px;
+  }
+  .price-now{
+    font-family:'Fraunces', serif;
+    font-size:clamp(48px, 9vw, 68px);
+    font-weight:600;
+    color:var(--teal-light);
+    line-height:1;
+  }
+  .price-sub{
+    font-size:15px;
+    color:#c9d3e0;
+    margin-top:8px;
+  }
+  .spots-note{
+    display:inline-block;
+    margin-top:28px;
+    padding:10px 20px;
+    border-radius:100px;
+    background:rgba(231,181,98,0.16);
+    color:var(--gold);
+    font-size:14px;
+    font-weight:700;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-item{
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+    text-align:left;
+  }
+  .faq-item:last-child{border-bottom:none;}
+  .faq-item h3{font-size:18px; margin-bottom:8px;}
+  .faq-item p{font-size:16px; margin-bottom:0;}
 
   /* ---------- testimonials ---------- */
   .testimonials-inner{max-width:900px; margin:0 auto;}
@@ -265,6 +381,13 @@
     margin-bottom:6px;
   }
   .footer-legal{font-size:13px; color:var(--muted);}
+  .ps-line{
+    max-width:600px;
+    margin:0 auto;
+    font-size:15px;
+    font-style:italic;
+    color:var(--muted);
+  }
 
   @media (max-width:560px){
     section{padding:48px 0;}
@@ -274,18 +397,25 @@
 </head>
 <body>
 
+<div class="urgency-banner">Founding Member enrollment is open, only <strong>20 spots</strong>. Doors close Friday, October 16 at 11:59 PM PDT.</div>
+
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="glow" aria-hidden="true"></div>
   <div class="wrap hero-content">
     <img class="logo-mark" src="logo.png" alt="Reboot, Rise, & Receive">
-    <h1>You've done the coaching. The courses. The vision boards. So why does it still feel impossible to charge what you're worth?</h1>
-    <p class="lede">Because it was never a knowledge problem. It's a subconscious programming problem &mdash; and once you clear it, <strong>the confidence, the impact, and the abundant income you've been waiting for finally have room to show up.</strong></p>
+    <h1>You've done the coaching. The courses. The mindset work. So why does it still feel impossible to charge what you're worth?</h1>
+    <p class="lede">Because it was never a knowledge problem. It's a subconscious programming problem. And once you clear it, <strong>the confidence, the impact, and the income you've been working toward finally have room to show up.</strong></p>
     <a href="https://buy.stripe.com/9B67sK1xBgOjg0v3PZ8ww0i" class="btn">
-      I'M IN &mdash; LET'S DO THIS
+      CLAIM YOUR FOUNDING MEMBER SPOT
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </a>
     <span class="btn-sub">Secure checkout &middot; instant access</span>
+
+    <div class="short-testimonial">
+      <p>"Karen has helped me release deep-rooted money beliefs, safety patterns, and value stories that were quietly holding me back, not just in my business, but in my life."</p>
+      <span>Michelle V.</span>
+    </div>
   </div>
 </section>
 
@@ -294,27 +424,27 @@
   <div class="wrap">
     <p class="eyebrow">I See You</p>
     <h2>You have a gift. A real one.</h2>
-    <p>I'm going to be bold with you, because I believe in you that much. And I'm going to say it with love: you have a gift. The kind that changes lives. And you know it. You've always known it.</p>
+    <p>I'm going to be bold with you, because I believe in you that much. You have a gift. The kind that changes lives. And you know it. You've always known it.</p>
     <p>So why are you still&hellip;</p>
     <ul class="pain-list">
       <li>
         <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-        <span>Giving your best work away &mdash; or not offering it at all?</span>
+        <span>Undercharging for your best work, or not offering it at all?</span>
       </li>
       <li>
         <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-        <span>Working a second job to fund the business you were meant to build?</span>
+        <span>Feeling the call to live a life of purpose on purpose, and still not answering it fully?</span>
       </li>
       <li>
         <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-        <span>Watching people with half your skill get paid handsomely for subpar results?</span>
+        <span>Watching people with half your skill get paid well for mediocre results?</span>
       </li>
       <li>
         <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-        <span>Feeling like you're dying inside while the world has no idea you exist?</span>
+        <span>Feeling like the world has no idea you exist?</span>
       </li>
     </ul>
-    <p>I know how much that hurts. I also know you're not lazy, not broken, and not incapable. You're one of the most dedicated people I know &mdash; you've read the books, done the programs, listened to every podcast, and still showed up to try again.</p>
+    <p>I know how much that hurts. I also know you're not lazy, not broken, and not incapable. If you're anything like the women I work with, you're one of the most dedicated people out there. You've read the books, done the programs, listened to every podcast, and still showed up to try again.</p>
     <p>So let me tell you the truth no one else has had the courage to tell you:</p>
     <p class="pull-quote">"You don't need more strategies. You need to clear what's blocking the ones you already have."</p>
   </div>
@@ -325,25 +455,25 @@
   <div class="wrap">
     <p class="eyebrow">What's Really Happening</p>
     <h2>Let's name it.</h2>
-    <p>Every time you think about making a video, your chest tightens. Every time you consider reaching out to someone personally, your brain floods with reasons not to. Every time you think about posting &mdash; really posting &mdash; you hear a voice whisper: <em>who do you think you are?</em></p>
-    <p>And the moment you think about charging what you're worth? You freeze. You hear words like <em>greedy, pushy, salesy</em> &mdash; and you shrink back into "maybe I'll just give this one away."</p>
-    <p>Sound familiar? Here's what that's costing you, in real life:</p>
+    <p>Every time you think about making a video, your chest tightens. Every time you consider reaching out to someone personally, your brain floods with reasons not to. Every time you think about posting, really posting, you hear a voice whisper: <em>who do you think you are?</em></p>
+    <p>And the moment you think about charging what you're worth? You freeze. Words like <em>pushy</em> and <em>salesy</em> show up, and you shrink back into "I'll just keep my prices low, so no one thinks I'm greedy."</p>
+    <p>Sound familiar? Here's what that's costing you:</p>
     <ul class="pain-list">
       <li>
         <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-        <span><strong>You're watching less-qualified people succeed.</strong> People delivering subpar results are getting praised, paid, and promoted &mdash; while you stay invisible.</span>
+        <span><strong>You're watching less-qualified people succeed.</strong> People delivering mediocre results are getting praised, paid, and booked, while you stay invisible.</span>
       </li>
       <li>
         <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-        <span><strong>You're funding your dream with survival jobs.</strong> Second job. Third job. All so you can afford to keep a business alive that isn't paying you back.</span>
+        <span><strong>The people you're meant to help are still waiting.</strong> Your ideal clients are out there right now, struggling with exactly what you know how to help with. And they can't find you, because you're not showing up where they can see you.</span>
       </li>
       <li>
         <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-        <span><strong>You're giving it away.</strong> Your best work, your expertise, your gift &mdash; free. Because asking for money feels like a betrayal of who you are.</span>
+        <span><strong>You're undercharging for your work.</strong> Your best work, your expertise, your gift, priced far below what it's worth. Because asking for more feels like a betrayal of who you are.</span>
       </li>
     </ul>
-    <p>And inside? You're depressed. You're resentful. You know exactly what to do &mdash; and you can't make yourself do it. It's the most maddening feeling in the world.</p>
-    <p>I'm not here to shame you. I'm here to tell you something that will change everything:</p>
+    <p>And inside, you feel heavy, stuck, and quietly resentful. You know exactly what to do, and you can't make yourself do it. It's the most maddening feeling in the world.</p>
+    <p>I'm not here to shame you. I'm here to tell you something useful:</p>
     <p class="pull-quote">"That freeze isn't a character flaw. It's a program. And programs can be cleared."</p>
   </div>
 </section>
@@ -353,15 +483,15 @@
   <div class="wrap">
     <p class="eyebrow" style="color:var(--teal-light);">What Happens If Nothing Changes?</p>
     <h2>This doesn't get better on its own.</h2>
-    <p>Here's the part nobody wants to say out loud. A year from now, if nothing changes:</p>
+    <p>A year from now, if nothing changes:</p>
     <ul class="cost-list">
       <li>The resentment will be deeper.</li>
-      <li>The second job will feel more permanent.</li>
-      <li>The gift you were meant to share will still be locked inside you.</li>
-      <li>And the people who needed you? They'll find help from someone less qualified &mdash; because at least that someone was visible.</li>
+      <li>The call to live a life of purpose on purpose will only get louder, and harder to ignore.</li>
+      <li>The gift you were meant to share will still be sitting on the shelf.</li>
+      <li>And the people who needed you will find help from someone less qualified, because at least that person was visible.</li>
     </ul>
-    <p>You're already paying for this problem, every single day. You're just paying in quiet desperation instead of in cash.</p>
-    <p class="pull-quote">"The dog sitting on the nail whines because it hurts just enough to complain &mdash; but not enough to move. You've been sitting on that nail for years. It's time to get up."</p>
+    <p>You're already paying for this problem every single day. Every underpriced session, every offer you didn't make, every client who never found you. It adds up, in dollars and in frustration.</p>
+    <p class="pull-quote">"The dog sitting on the nail whines because it hurts just enough to complain, but not enough to move. You've been sitting on that nail for years. It's time to get up."</p>
   </div>
 </section>
 
@@ -370,40 +500,122 @@
   <div class="wrap">
     <p class="eyebrow">The Revelation That Changes Everything</p>
     <h2>You don't have a knowledge problem. You have a programming problem.</h2>
-    <p>Think about it. You've done the vision boards. You've hired the coaches. You've read the books. You've listened to the podcasts. You've learned so much &mdash; and yet, nothing changes. Why?</p>
+    <p>You've done the mindset work. You've hired the coaches. You've read the books. You've learned so much, and yet nothing changes. Why?</p>
     <p>Because no amount of learning changes what's running underneath.</p>
-    <p>Your mind is running on old programs &mdash; beliefs and patterns that were installed long ago, outside of your awareness. Programs that decided, somewhere along the way, that it's not safe to be seen. That it's not safe to ask. That it's not safe to take up space.</p>
-    <p>Every strategy you've learned has been running on that old software. And old software crashes every time.</p>
-    <p>That's why you can know exactly what to do and still not do it. That's why you can be brilliant at what you do and still invisible. That's why you can want it so badly and still freeze.</p>
+    <p>Your mind is running on old programs, installed long ago, outside of your awareness. Programs that decided it's not safe to be seen. Not safe to ask. Not safe to take up space.</p>
+    <p>Think of it like your phone. You can download the best new app in the world, but if your phone is running old software, the app keeps freezing and crashing. Every strategy you've learned has been running on that old software.</p>
+    <p>That's why you can know exactly what to do and still not do it. That's why you can be brilliant and still invisible. And that's why you can't clear it on your own: it lives below the level where willpower works.</p>
     <p class="pull-quote">"You've been trying to fix the symptom. It's time to clear the root cause."</p>
   </div>
 </section>
 
-<!-- ================= MEET THE PROGRAM ================= -->
+<!-- ================= KAREN'S STORY ================= -->
 <section class="band-deep">
   <div class="wrap">
-    <p class="eyebrow">Meet Reboot, Rise &amp; Receive</p>
-    <h2>A bold, loving, step-by-step process to clear what's been blocking you.</h2>
-    <p>That's why I created Reboot, Rise &amp; Receive &mdash; a bold, loving, step-by-step process designed to clear the subconscious blocks that keep you invisible, undercharging, and waiting for permission&hellip; so you can finally make offers with confidence, get paid abundantly, and share your gift with the world.</p>
-    <p>This is not another course. This is not more information.</p>
+    <p class="eyebrow">How Reboot, Rise &amp; Receive Was Born</p>
+    <h2>The same patterns, over and over.</h2>
+    <p>Over the years, I've worked with so many coaches, healers, and entrepreneurs in my private practice. Brilliant, caring, deeply skilled women. And again and again, I noticed the same thing.</p>
+    <p>The things holding them back were almost identical. The freeze before hitting "post." The price that dropped the moment someone hesitated. The sales call they kept putting off. Different women, different stories, and the very same patterns.</p>
+    <p>In our 1:1 sessions, Rapid Resolution Therapy clears the old experiences underneath those patterns, and the shifts are real. But I kept seeing what came next: once the old programming was cleared, my clients were ready for more. They wanted to step into the next version of themselves, and they needed support to do it.</p>
+    <p>Clearing the old is powerful. But it's only part of the picture. The next step is building what goes in its place.</p>
+    <p>So I created a program to pick up where RRT leaves off. It's everything I wished I could give every client who came through my door.</p>
+  </div>
+</section>
 
-    <div class="todo">
-      <span class="todo-label">Needs your input</span>
-      <h3>This is where the doc cuts off</h3>
-      <p>Your file ends mid-sentence right here &mdash; "This is the end..." &mdash; exactly where it's about to describe what Reboot, Rise &amp; Receive actually includes. I'm not going to guess at this, since it's a factual claim about the program, not copy style. Send me:</p>
+<!-- ================= INTRODUCING THE PROGRAM ================= -->
+<section class="band-cream">
+  <div class="wrap">
+    <p class="eyebrow">Meet Reboot, Rise &amp; Receive</p>
+    <h2>A 6-week group program to clear what's blocking you, and build what comes next.</h2>
+    <p>For heart-centered coaches, healers, and entrepreneurs who are ready to stop hiding and finally let themselves be seen, paid well, and fully supported for the gifts they bring.</p>
+    <p>You'll get the same RRT clearing work, and then we go deeper: shadow integration to reclaim the parts of you that you learned to hide, and installing new software in your mind so you can make offers with confidence, enjoy selling, raise your rates, and receive the income your gifts deserve.</p>
+    <p>This is not another course. This is not more information. This is an experiential program, where the old programming gets cleared and new software gets installed, right there in our sessions.</p>
+
+    <div class="phase-card">
+      <span class="phase-label">Phase 1</span>
+      <h3>Clean the Slate</h3>
+      <p>We start at the root. Using Rapid Resolution Therapy, we clear the old experiences that taught you it wasn't safe to be visible, ask for money, or take up space. RRT works directly with the subconscious, so there's no need to relive painful memories or spend years talking about them. Patterns that have followed you for decades can shift remarkably quickly. It's the fastest, most direct way I know to clear what's been in your way, which is why the program begins here.</p>
+    </div>
+    <div class="phase-card">
+      <span class="phase-label">Phase 2</span>
+      <h3>Reclaim Your Full Self</h3>
+      <p>With the slate clean, we turn toward the parts of you that you learned to hide: the ambition, the desire, the parts that once felt like "too much." Through shadow work, you'll discover that your resistance to receiving isn't the enemy. It holds energy you can take back and turn into fuel for your vision.</p>
+    </div>
+    <div class="phase-card">
+      <span class="phase-label">Phase 3</span>
+      <h3>Get Bold and Visible, Sell with Joy, and Embody Abundance</h3>
+      <p>Clearing the old is half the equation. The other half is installing new software: new ways of thinking, feeling, and showing up that support the business you're building. You'll practice being visible, making offers, and receiving, with live support and a circle of women doing the same, so the change becomes who you are instead of something you have to force.</p>
+    </div>
+
+    <h3 style="margin-top:36px; margin-bottom:14px; font-size:22px;">Why six weeks?</h3>
+    <p>I made this a 6-week program on purpose. Clearing the old programming can happen quickly, but building something new takes time. In between our sessions, you'll go out and actually use what's shifted: posting the video, making the offer, saying your new price out loud. Then you'll come back, share what happened, and we'll go deeper. Each week builds on the one before, so the changes have time to settle in and become part of how you show up every day, not something that fades after a few good weeks.</p>
+
+    <h3 style="margin-top:36px; margin-bottom:14px; font-size:22px;">What's included</h3>
+    <ul class="included-list">
+      <li>
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>6 weeks of live, experiential group sessions with me</span>
+      </li>
+      <li>
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Rapid Resolution Therapy clearing work, done live in our sessions</span>
+      </li>
+      <li>
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Pre-recorded modules you can watch at your own pace, so the live sessions can go straight to the deeper work</span>
+      </li>
+      <li>
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Audio meditations to reinforce your new software daily, between sessions and long after the program ends</span>
+      </li>
+      <li>
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Replays of every live call, so you can watch on your own schedule</span>
+      </li>
+      <li>
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>A private Facebook community, where you can share your wins, ask questions, and get support between sessions</span>
+      </li>
+    </ul>
+    <p>The outcome? You show up consistently because it finally feels natural. You make offers without the dread. You hold your price. And you attract clients who are thrilled to pay you what you're worth, because you're finally letting yourself receive it.</p>
+  </div>
+</section>
+
+<!-- ================= WHO THIS IS FOR ================= -->
+<section class="band-deep">
+  <div class="wrap">
+    <h2 style="text-align:center;">Is this for you?</h2>
+    <div class="fit-block fit-yes">
+      <h3>This is for you if&hellip;</h3>
       <ul>
-        <li>What's included / the module or week-by-week breakdown</li>
-        <li>Format &amp; length (live calls? self-paced? how many weeks, confirmed as 6 from the waitlist copy?)</li>
-        <li>Price and payment plan options (I have your Stripe link, but not what price it's charging or whether there's a payment-plan option)</li>
-        <li>Any guarantee terms</li>
-        <li>Bonuses, if any</li>
+        <li>You're a coach, healer, or entrepreneur who is truly good at what you do.</li>
+        <li>You've done the courses and the strategies, and you still freeze when it's time to show up, sell, or charge what you truly want to be paid.</li>
+        <li>You undercharge for your work, or when you do charge full price, you overdeliver to make up for it.</li>
+        <li>You're ready to clear the root cause instead of pushing through it one more time.</li>
+      </ul>
+    </div>
+    <div class="fit-block fit-no">
+      <h3>This is not for you if&hellip;</h3>
+      <ul>
+        <li>You're looking for another marketing strategy or funnel template.</li>
+        <li>You're not willing to show up for six weeks, for yourself and for your future clients.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ================= TESTIMONIALS ================= -->
+<!-- ================= MEET KAREN ================= -->
 <section class="band-cream">
+  <div class="wrap" style="text-align:center;">
+    <p class="eyebrow">Meet Karen</p>
+    <h2>M.Ed., Rapid Resolution Therapy Specialist</h2>
+    <p style="text-align:left;">I'm Karen Seltz, M.Ed., and I'm one of only 33 Rapid Resolution Therapy specialists in the world. I'm also the founder of the Total Subconscious Reboot Framework, and I specialize in clearing multiple past events in a single session, so change happens faster than most people believe is possible.</p>
+    <p style="text-align:left;">I've also brought RRT into group settings through six workshops I co-led with a colleague, called Unkink Your Financial Hose: Become an Abundance Magnet. Reboot, Rise &amp; Receive is my first full 6-week group program, and I couldn't be more excited about who's going to be in this room.</p>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="band-deep">
   <div class="wrap wrap-wide" style="text-align:center;">
     <p class="eyebrow">What Clients Are Saying</p>
     <h2>Real people. Real shifts.</h2>
@@ -427,29 +639,68 @@
   </div>
 </section>
 
-<!-- ================= PRICING / GUARANTEE PLACEHOLDER ================= -->
-<section class="band-deep">
+<!-- ================= INVESTMENT ================= -->
+<section class="band-ink" style="text-align:center;">
   <div class="wrap">
-    <div class="todo">
-      <span class="todo-label">Needs your input</span>
-      <h3>Pricing &amp; guarantee section</h3>
-      <p>A Wedmore-style page always shows the investment clearly and reverses the risk with a strong guarantee right before the final ask. I have the Stripe checkout link wired into every button on this page, but not:</p>
-      <ul>
-        <li>The actual price to display (or "pay in full vs. payment plan" options)</li>
-        <li>Guarantee language, if Karen offers one</li>
-      </ul>
-      <p>Send those and I'll build this section out properly instead of leaving it blank.</p>
+    <p class="eyebrow" style="color:var(--teal-light);">The Investment</p>
+    <h2>So what's the investment?</h2>
+    <p style="text-align:left;">Here's how this compares to working with me privately. When clients work with me in my Total Subconscious Reboot Program, they invest $3,997 for three sessions of 1:1 clearing work.</p>
+    <p style="text-align:left;">Reboot, Rise &amp; Receive includes that same Rapid Resolution Therapy clearing, and then goes further. Instead of three sessions, you get six weeks of shadow integration, new software installation, real-world practice between sessions, and live support from me and a circle of women doing the same work.</p>
+    <p style="text-align:left;">When I run this program again, the investment will be $1,497. But this is the first round, and I want the first 20 women in this room to be the ones who are ready right now.</p>
+    <p style="text-align:left;">So as a Founding Member, your investment is:</p>
+
+    <div class="price-compare">
+      <span class="price-was">$1,497 next round</span>
+      <span class="price-now">$777</span>
+      <p class="price-sub">That's $720 less than the next round, less than a quarter of my private program, and the lowest this program will ever be.</p>
     </div>
+
+    <a href="https://buy.stripe.com/9B67sK1xBgOjg0v3PZ8ww0i" class="btn">
+      YES, I'M CLAIMING MY SPOT
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+    <span class="btn-sub" style="color:#8b96a8;">Secure checkout</span>
+    <div><span class="spots-note">Only 20 spots &middot; doors close Friday, October 16 at 11:59 PM PDT, or when spots are filled</span></div>
   </div>
 </section>
 
-<!-- ================= FAQ PLACEHOLDER ================= -->
+<!-- ================= COMMITMENT ================= -->
 <section class="band-cream">
   <div class="wrap">
-    <div class="todo">
-      <span class="todo-label">Needs your input</span>
-      <h3>FAQ section</h3>
-      <p>Common objections a page like this usually answers: "What if I don't have time?", "What if this doesn't work for me?", "How is this different from therapy/other programs?", "What if I've already tried everything?" Send Karen's actual answers (or tell me to draft them in her voice from the testimonials) and I'll add this section.</p>
+    <h2>This is for committed women only</h2>
+    <p>I'm keeping this group small because I want every woman in this room to be all in. The work we do together is deep, and it's most powerful when everyone shows up fully, for themselves and for each other.</p>
+    <p>That's why all sales are final. I'm not looking for women who want to "try it and see." I'm looking for women who are ready to clear what's been in their way and step into the work they were meant to do. If that's you, I'll be there with you every step of the way.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="band-deep">
+  <div class="wrap">
+    <h2 style="text-align:center;">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>How is this different from everything else I've tried?</h3>
+      <p>Most programs teach you what to do. This one clears what stops you from doing it. We work at the subconscious level, where the freeze actually comes from, instead of adding more strategies on top.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if I've already tried everything?</h3>
+      <p>Then you're exactly who this is for. If you've done the courses and the mindset work and the pattern keeps coming back, that's a sign the root hasn't been addressed yet.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is this different from working with you 1:1?</h3>
+      <p>My private program focuses on RRT clearing over three sessions. Reboot, Rise &amp; Receive includes that clearing, then continues with six weeks of shadow integration, new software installation, and real-world practice, with the support of a group doing the same work.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Will I have to talk about painful memories in front of the group?</h3>
+      <p>No. RRT doesn't require reliving painful experiences or going into the details of them. In fact, when you tell the story of a painful event, or even think about it, your subconscious mind responds as if it's happening right now. That's why, if someone starts to go into the story, I'll gently pause them. It keeps everyone present, comfortable, and open to change, so the clearing can happen without the suffering.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if I can't make every live call?</h3>
+      <p>Replays of every live call will be available, so you can catch up on your own schedule.</p>
+    </div>
+    <div class="faq-item">
+      <h3>When does it start?</h3>
+      <p>You'll receive a welcome email with everything you need to get started right after you enroll.</p>
     </div>
   </div>
 </section>
@@ -459,16 +710,18 @@
   <div class="wrap">
     <h2 style="color:#fff;">This is your reboot.</h2>
     <p style="color:#c9d3e0;">The gift was never the problem. Let's clear what's been standing in front of it.</p>
+    <p style="color:var(--teal-light); font-weight:700;">Only 20 Founding Member spots at $777. Doors close Friday, October 16 at 11:59 PM PDT.</p>
     <a href="https://buy.stripe.com/9B67sK1xBgOjg0v3PZ8ww0i" class="btn">
-      I'M IN &mdash; LET'S DO THIS
+      YES, I'M CLAIMING MY SPOT
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </a>
-    <span class="btn-sub" style="color:#8b96a8;">Secure checkout &middot; instant access</span>
+    <span class="btn-sub" style="color:#8b96a8;">Secure checkout</span>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
+  <p class="ps-line" style="margin-bottom:28px;">P.S. If something on this page made you think "that's me," trust that. This is the lowest this program will ever be, and the spots will go to the women who say yes first.</p>
   <p class="footer-program">Reboot, Rise, &amp; Receive</p>
   <p class="footer-legal">© 2026 Karen Seltz. All rights reserved.</p>
 </footer>

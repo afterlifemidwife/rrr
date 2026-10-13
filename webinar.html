@@ -3,147 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Live Webinar | Karen Seltz</title>
-<meta name="description" content="A free live webinar with Karen Seltz, M.Ed. Choose your session and save your seat.">
+<title>Free Webinar: Why You're Still Undercharging | Karen Seltz</title>
+<meta name="description" content="A free live webinar with Karen Seltz, M.Ed. Discover the hidden reason smart, heart-centered women struggle to be visible, make the offer, and charge what they're worth.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#faf8f3;--cream-deep:#f2ede2;--ink:#142440;--ink-soft:#324260;--teal-deep:#0f5f5a;--teal:#1fa69b;--teal-light:#7fe0d3;--gold:#e7b562;--muted:#5c6773;--line:rgba(20,36,64,0.12);--danger:#b3492f;}
+:root{--cream:#faf8f3;--cream-deep:#f2ede2;--ink:#142440;--ink-soft:#324260;--teal-deep:#0f5f5a;--teal:#1fa69b;--teal-light:#7fe0d3;--gold:#e7b562;--muted:#5c6773;--line:rgba(20,36,64,0.12);--danger:#b3492f}
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--ink);font-family:'Manrope',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;line-height:1.15;color:var(--ink)}
 .wrap{max-width:720px;margin:0 auto;padding:0 24px}
-p{margin-bottom:18px;font-size:18px;color:var(--ink-soft)}
+p{margin-bottom:20px;font-size:18px;color:var(--ink-soft)}
 p:last-child{margin-bottom:0}
 strong{color:var(--ink);font-weight:700}
-section{padding:56px 0}
+section{padding:60px 0}
 .banner{background:var(--ink);color:#fff;text-align:center;padding:12px 20px;font-size:14.5px;font-weight:600}
 .banner strong{color:var(--teal-light)}
-.hero{text-align:center;padding:48px 0 40px}
+.hero{text-align:center;padding:52px 0 48px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;top:-200px;left:50%;transform:translateX(-50%);border-radius:50%;filter:blur(70px);background:radial-gradient(circle,rgba(127,224,211,.5),rgba(127,224,211,0) 70%);pointer-events:none}
+.hero .wrap{position:relative}
 .logo-mark{width:90px;margin:0 auto 24px;display:block}
 .eyebrow{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:16px}
-.hero h1{font-size:clamp(28px,4.8vw,42px);margin-bottom:20px}
-.hero .lede{font-size:19px;max-width:600px;margin:0 auto}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 28px;box-shadow:0 20px 44px -24px rgba(20,36,64,.3);margin-top:32px;text-align:left}
-.card h2{font-size:24px;text-align:center;margin-bottom:6px}
-.card .sub{text-align:center;font-size:15px;color:var(--muted);margin-bottom:22px}
+.hero h1{font-size:clamp(28px,4.8vw,44px);margin-bottom:22px}
+.hero .lede{font-size:19px;max-width:620px;margin:0 auto}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--teal-deep);color:#fff;font:inherit;font-weight:800;font-size:16px;letter-spacing:.04em;padding:20px 44px;border-radius:999px;box-shadow:0 14px 28px -14px rgba(15,95,90,.7);text-decoration:none;margin-top:28px}
+.btn:hover{background:var(--teal)}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn.full{display:block;width:100%;margin-top:6px}
+.sess-pill{display:inline-block;margin-top:18px;font-size:14.5px;font-weight:700;color:var(--ink-soft)}
+h2.sec{font-size:clamp(25px,3.8vw,34px);margin-bottom:26px}
+.center{text-align:center}
+.band-cream{background:var(--cream-deep)}
+.band-ink{background:var(--ink)}
+.band-ink h2,.band-ink p{color:#fff}
+.band-ink p{opacity:.92}
+.list{list-style:none;margin:0 0 22px}
+.list li{position:relative;padding-left:34px;margin-bottom:14px;font-size:18px;color:var(--ink-soft)}
+.list li:before{content:"\2022";position:absolute;left:6px;top:-2px;color:var(--teal-deep);font-weight:800;font-size:24px}
+.list.check li:before{content:"\2713";left:0;top:0;font-size:18px}
+.lead-in{font-weight:700;color:var(--ink)}
+.big-q{font-family:'Fraunces',serif;font-size:clamp(21px,3vw,26px);font-weight:600;color:var(--ink);line-height:1.35;margin-bottom:22px}
+.disc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px;margin-bottom:18px}
+.disc .n{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:50%;background:var(--teal-deep);color:#fff;font-weight:800;margin-bottom:12px}
+.disc h3{font-size:21px;margin-bottom:10px}
+.disc p{font-size:17px;margin:0}
+.sessions{display:grid;gap:14px;margin:8px 0 6px}
+.sess{background:#fff;border:2px solid var(--teal-deep);border-radius:16px;padding:22px;text-align:center}
+.sess .d{font-family:'Fraunces',serif;font-size:23px;font-weight:600;color:var(--ink)}
+.sess .t{font-size:16px;color:var(--ink-soft);margin-top:4px}
+.imagine p{font-family:'Fraunces',serif;font-size:21px;line-height:1.4;color:var(--ink)}
+.imagine p.plain{font-family:'Manrope',sans-serif;font-size:18px;color:var(--ink-soft)}
+.quote{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;margin-bottom:20px}
+.quote p.q{font-family:'Fraunces',serif;font-style:italic;font-size:21px;line-height:1.5;color:var(--ink);margin-bottom:14px}
+.quote .by{font-size:15px;font-weight:700;color:var(--teal-deep)}
+.host{display:flex;gap:28px;align-items:flex-start}
+.host img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 14px 34px -14px rgba(20,36,64,.35);flex:none}
+.host .name{font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--ink);margin-bottom:10px}
+footer{padding:32px 0;text-align:center;font-size:13px;color:var(--muted)}
+/* modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(20,36,64,.7);display:none;align-items:flex-start;justify-content:center;padding:24px 16px;overflow-y:auto;z-index:100}
+.modal-overlay.active{display:flex}
+.modal-card{background:#fff;border-radius:18px;padding:34px 28px 28px;max-width:480px;width:100%;margin:auto;position:relative}
+.modal-close{position:absolute;top:10px;right:14px;background:none;border:0;font-size:30px;line-height:1;color:var(--muted);cursor:pointer}
+.modal-card h2{font-size:25px;text-align:center;margin-bottom:6px}
+.modal-card .sub{text-align:center;font-size:15px;color:var(--muted);margin-bottom:22px}
 label.f{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px}
 input[type=text],input[type=email]{width:100%;padding:14px 16px;font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:10px;margin-bottom:16px;background:var(--cream)}
 input[type=text]:focus,input[type=email]:focus{outline:none;border-color:var(--teal)}
-fieldset{border:0;margin-bottom:20px}
+fieldset{border:0;margin-bottom:18px}
 legend{font-size:14px;font-weight:700;margin-bottom:8px}
 .opt{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1.5px solid var(--line);border-radius:10px;margin-bottom:10px;cursor:pointer;background:var(--cream);font-size:16px;color:var(--ink)}
 .opt input{margin-top:5px;accent-color:var(--teal-deep)}
 .opt:has(input:checked){border-color:var(--teal-deep);background:#eaf7f5}
-.opt span small{display:block;color:var(--muted);font-size:13.5px}
-.btn{display:block;width:100%;border:0;cursor:pointer;background:var(--teal-deep);color:#fff;font:inherit;font-weight:800;font-size:16px;letter-spacing:.04em;padding:18px 24px;border-radius:999px;box-shadow:0 14px 28px -14px rgba(15,95,90,.7)}
-.btn:hover{background:var(--teal)}
-.btn:disabled{opacity:.6;cursor:wait}
-.err{display:none;color:var(--danger);font-size:14px;font-weight:600;margin:-8px 0 14px}
+.opt small{display:block;color:var(--muted);font-size:13.5px}
+.err{display:none;color:var(--danger);font-size:14px;font-weight:600;margin:-6px 0 14px}
 .fine{font-size:13px;color:var(--muted);text-align:center;margin-top:14px}
-.band-cream{background:var(--cream-deep)}
-h2.sec{font-size:clamp(24px,3.6vw,32px);text-align:center;margin-bottom:28px}
-.list{list-style:none}
-.list li{position:relative;padding-left:34px;margin-bottom:16px;font-size:18px;color:var(--ink-soft)}
-.list li:before{content:"\2713";position:absolute;left:0;top:0;color:var(--teal-deep);font-weight:800}
-.host{display:flex;gap:24px;align-items:center}
-.host img{width:130px;height:130px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 14px 34px -14px rgba(20,36,64,.35);flex:none}
-.host .name{font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--ink);margin-bottom:6px}
-footer{padding:32px 0;text-align:center;font-size:13px;color:var(--muted)}
-@media(max-width:560px){.host{flex-direction:column;text-align:center}.card{padding:26px 20px}}
+@media(max-width:600px){.host{flex-direction:column;align-items:center;text-align:center}.btn{padding:18px 30px}}
 </style>
 </head>
 <body>
 
-<div class="banner">Free live webinar. Two sessions to choose from: <strong>Tue Oct 27</strong> or <strong>Thu Oct 29</strong>.</div>
+<div class="banner">Free live webinar. Choose <strong>Tue Oct 27</strong> or <strong>Thu Oct 29</strong>.</div>
 
 <section class="hero">
   <div class="wrap">
     <img class="logo-mark" src="logo.png" alt="Reboot, Rise & Receive">
-    <div class="eyebrow">Free Live Webinar with Karen Seltz, M.Ed.</div>
-    <!-- EDIT: headline -->
-    <h1>[WEBINAR TITLE: the one big promise goes here]</h1>
-    <!-- EDIT: one-line promise -->
-    <p class="lede">Join Karen live to learn how to clear the subconscious blocks that keep you invisible, undercharging, and waiting for permission.</p>
-
-    <div class="card" id="register">
-      <h2>Save your seat</h2>
-      <p class="sub">Pick the session that fits your schedule.</p>
-
-      <form id="webinarForm" action="https://whispersofgodlive.us17.list-manage.com/subscribe/post?u=c12a1c94a9adc8c53ce37cc00&amp;id=4f45027273&amp;f_id=00644ae2f0" method="post" target="hidden_iframe" novalidate>
-        <label class="f" for="mce-FNAME">First name</label>
-        <input type="text" name="FNAME" id="mce-FNAME" autocomplete="given-name">
-
-        <label class="f" for="mce-EMAIL">Email address</label>
-        <input type="email" name="EMAIL" id="mce-EMAIL" autocomplete="email" required>
-
-        <fieldset id="sessions">
-          <legend>Choose your session</legend>
-          <label class="opt"><input type="radio" name="group[351967]" value="1"><span>Tuesday, October 27<small>4 p.m. MST / 7 p.m. ET</small></span></label>
-          <label class="opt"><input type="radio" name="group[351967]" value="4"><span>Thursday, October 29<small>10 a.m. MST / 1 p.m. ET</small></span></label>
-        </fieldset>
-        <div class="err" id="err">Please enter a valid email and choose a session.</div>
-
-        <input type="hidden" name="tags" value="8334945">
-        <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_c12a1c94a9adc8c53ce37cc00_4f45027273" tabindex="-1" value=""></div>
-
-        <button class="btn" type="submit" id="submitBtn">SAVE MY SEAT</button>
-        <p class="fine">You will get an email asking you to confirm. Please click the link so your reminders reach you.</p>
-      </form>
-      <iframe name="hidden_iframe" style="display:none" title="submit target"></iframe>
-    </div>
+    <div class="eyebrow">A Free Live Webinar with Karen Seltz, M.Ed.</div>
+    <h1>Why You&rsquo;re Still Undercharging, Overdelivering &amp; Holding Back</h1>
+    <p class="lede">The hidden reason smart, heart-centered women struggle to be fully visible, make the offer, charge what they&rsquo;re worth, and receive more money.</p>
+    <button class="btn" type="button" data-open-modal>YES! SAVE MY FREE SEAT</button>
+    <div class="sess-pill">Tue Oct 27 &nbsp;|&nbsp; Thu Oct 29</div>
   </div>
 </section>
 
 <section class="band-cream">
   <div class="wrap">
-    <h2 class="sec">In this live session you will:</h2>
-    <!-- EDIT: 3 to 5 takeaways -->
+    <h2 class="sec">You&rsquo;ve done the work.</h2>
+    <p>You&rsquo;ve taken the courses. You&rsquo;ve meditated, journaled, visualized, and invested in becoming the best version of yourself.</p>
+    <p>You know you&rsquo;re good at what you do. You care deeply about your clients. And you know you could be reaching more people and making a much bigger impact.</p>
+    <p class="big-q">So why are you still holding back?</p>
+    <p class="lead-in">Maybe you:</p>
     <ul class="list">
-      <li>[Takeaway 1: what they will understand]</li>
-      <li>[Takeaway 2: a block or pattern they will spot]</li>
-      <li>[Takeaway 3: a practice they will leave with]</li>
-      <li>[Takeaway 4: what is possible on the other side]</li>
+      <li>Write the post, then delete it because it&rsquo;s not quite right.</li>
+      <li>Quote a lower price than you intended because you&rsquo;re worried they&rsquo;ll say no.</li>
+      <li>Give clients far more time and energy than they&rsquo;re paying for.</li>
+      <li>Keep refining your offers instead of actually making them.</li>
+      <li>Avoid sales conversations because you don&rsquo;t want to sound pushy.</li>
+      <li>Take another course, hoping this one will finally give you the confidence to move forward.</li>
     </ul>
+    <p>And while you&rsquo;re doing all of that, you&rsquo;re missing opportunities to serve more people, grow your business, and earn the money you want.</p>
+    <p class="big-q" style="margin-top:28px">What if the problem isn&rsquo;t that you don&rsquo;t know what to do?</p>
+    <p>What if something beneath your conscious awareness is keeping you from taking the very actions that would move your business forward?</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2 class="sec">Your host</h2>
+    <h2 class="sec center">In This Free Webinar, You&rsquo;ll Discover:</h2>
+    <div class="disc"><div class="n">1</div><h3>Why knowing what to do isn&rsquo;t enough.</h3><p>Why talented, experienced women can have all the right strategies and still find themselves procrastinating, perfecting, hiding, and avoiding the actions that generate clients and income.</p></div>
+    <div class="disc"><div class="n">2</div><h3>What&rsquo;s really behind undercharging, overdelivering, and avoiding sales.</h3><p>How subconscious patterns can influence your comfort with visibility, asking for money, setting boundaries, and making offers, even when you consciously want to grow.</p></div>
+    <div class="disc"><div class="n">3</div><h3>Why more mindset work may not be the missing piece.</h3><p>Why understanding your patterns, repeating affirmations, and trying harder don&rsquo;t always change them, and a different approach to creating lasting change.</p></div>
+    <div class="disc"><div class="n">4</div><h3>What&rsquo;s possible when those patterns no longer run the show.</h3><p>Imagine confidently sharing your work, making offers without feeling pushy, charging rates that reflect your value, and serving your clients without exhausting yourself.</p></div>
+  </div>
+</section>
+
+<section class="band-cream">
+  <div class="wrap">
+    <h2 class="sec">This Is for You If&hellip;</h2>
+    <p>You&rsquo;re a heart-centered female coach, healer, or entrepreneur who:</p>
+    <ul class="list check">
+      <li>Knows she has valuable gifts but struggles to charge accordingly.</li>
+      <li>Wants more clients and income without feeling pushy or salesy.</li>
+      <li>Is tired of overdelivering, undercharging, and exhausting herself.</li>
+      <li>Has invested in personal development and business strategies but still isn&rsquo;t taking consistent action.</li>
+      <li>Wants to be more visible, make more offers, and reach more people.</li>
+      <li>Is ready to stop preparing for the business she wants and start building it.</li>
+    </ul>
+    <p class="big-q" style="margin-top:28px">You don&rsquo;t need another strategy. You need to discover what&rsquo;s keeping you from using the strategies you already know.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <h2 class="sec">Choose Your Free Live Session</h2>
+    <div class="sessions">
+      <div class="sess"><div class="d">Tuesday, October 27, 2026</div><div class="t">4:00 PM Arizona / Pacific &nbsp;|&nbsp; 7:00 PM Eastern</div></div>
+      <div class="sess"><div class="d">Thursday, October 29, 2026</div><div class="t">10:00 AM Arizona / Pacific &nbsp;|&nbsp; 1:00 PM Eastern</div></div>
+    </div>
+    <button class="btn" type="button" data-open-modal>YES! SAVE MY FREE SEAT</button>
+  </div>
+</section>
+
+<section class="band-ink imagine">
+  <div class="wrap">
+    <h2 class="sec">Imagine What Could Change&hellip;</h2>
+    <p>What if you could stop second-guessing your prices?</p>
+    <p>What if you could publish the post, make the offer, and have the sales conversation without spending days overthinking it?</p>
+    <p>What if you could give your clients incredible value without giving away all your time and energy?</p>
+    <p style="margin-top:30px"><strong style="color:var(--teal-light)">You can care deeply about people AND build a profitable business.</strong></p>
+    <p>You can be generous without overdelivering.</p>
+    <p>You can be visible without becoming someone you&rsquo;re not.</p>
+    <p>You can make offers without being pushy.</p>
+    <p>And you can make a bigger impact while being well compensated for the difference you make.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec center">What Clients Are Saying</h2>
+    <div class="quote"><p class="q">&ldquo;After one session, the fear I had about speaking publicly on social media disappeared. It was literally gone! &hellip; Exactly 4 weeks later, $5k came to me unexpectedly. Frickin amazing!&rdquo;</p><div class="by">Kristen L., online coach</div></div>
+    <div class="quote"><p class="q">&ldquo;The fears that I had around my business, for example, &lsquo;Having money conversations and being direct are selfish,&rsquo; have been removed so that I can show up as my best self, both personally and professionally. I recommend Karen so much that I also have her work with my clients inside my high-ticket coaching program.&rdquo;</p><div class="by">Jana N., &ldquo;the authentic sales coach&rdquo;</div></div>
+    <div class="quote"><p class="q">&ldquo;After just one session with Karen I felt an intense release of pain I had held onto for years&hellip; and that mentality had been weighing me down and showed up in all of my relationships as &lsquo;playing small.&rsquo; Three hours with her were better than years of counseling and coaching with others.&rdquo;</p><div class="by">Tamara</div></div>
+  </div>
+</section>
+
+<section class="band-cream">
+  <div class="wrap">
+    <h2 class="sec center">Meet Your Host</h2>
     <div class="host">
       <img src="karen_seltz.jpg" alt="Karen Seltz, M.Ed.">
       <div>
         <div class="name">Karen Seltz, M.Ed.</div>
-        <!-- EDIT: short bio -->
-        <p>[Two or three sentences on Karen: who she helps and why she teaches this.]</p>
+        <p>Karen is a Rapid Resolution Therapy Specialist and subconscious reprogramming expert who helps people clear the hidden patterns keeping them from moving forward, without reliving painful experiences or spending years talking about them.</p>
+        <p>Her work helps heart-centered entrepreneurs become more visible, confidently communicate their value, and create more opportunities for income and impact.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="band-cream" style="text-align:center">
-  <div class="wrap">
-    <h2 class="sec" style="margin-bottom:16px">Ready to join us?</h2>
-    <p>Spots are free, but seats fill up. Choose your session and save yours.</p>
-    <a href="#register" class="btn" style="display:inline-block;width:auto;padding:18px 44px;margin-top:12px;text-decoration:none">SAVE MY SEAT</a>
+    <p class="big-q center" style="margin-top:36px">You&rsquo;ve already invested in learning what to do. Come discover what may be keeping you from doing it.</p>
+    <div class="center"><button class="btn" type="button" data-open-modal>SAVE MY FREE SEAT</button></div>
   </div>
 </section>
 
 <footer><div class="wrap">&copy; 2026 Karen Seltz. All rights reserved.</div></footer>
 
+<div class="modal-overlay" id="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="modal-close" type="button" data-close-modal aria-label="Close">&times;</button>
+    <h2 id="mTitle">Save your free seat</h2>
+    <p class="sub">Choose the session that fits your schedule.</p>
+    <form id="webinarForm" action="https://whispersofgodlive.us17.list-manage.com/subscribe/post?u=c12a1c94a9adc8c53ce37cc00&amp;id=4f45027273&amp;f_id=00644ae2f0" method="post" target="hidden_iframe" novalidate>
+      <label class="f" for="mce-FNAME">First name</label>
+      <input type="text" name="FNAME" id="mce-FNAME" autocomplete="given-name">
+      <label class="f" for="mce-EMAIL">Email address</label>
+      <input type="email" name="EMAIL" id="mce-EMAIL" autocomplete="email" required>
+      <fieldset>
+        <legend>Choose your session</legend>
+        <label class="opt"><input type="radio" name="group[351967]" value="1"><span>Tuesday, October 27<small>4:00 PM Arizona / Pacific | 7:00 PM Eastern</small></span></label>
+        <label class="opt"><input type="radio" name="group[351967]" value="4"><span>Thursday, October 29<small>10:00 AM Arizona / Pacific | 1:00 PM Eastern</small></span></label>
+      </fieldset>
+      <div class="err" id="err">Please enter a valid email and choose a session.</div>
+      <input type="hidden" name="tags" value="8334945">
+      <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_c12a1c94a9adc8c53ce37cc00_4f45027273" tabindex="-1" value=""></div>
+      <button class="btn full" type="submit" id="submitBtn">SAVE MY SEAT</button>
+      <p class="fine">You will get an email asking you to confirm. Please click the link so your reminders reach you.</p>
+    </form>
+    <iframe name="hidden_iframe" style="display:none" title="submit target"></iframe>
+  </div>
+</div>
+
 <script>
 (function(){
+  var modal=document.getElementById('modal');
+  function open(){modal.classList.add('active');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+  function close(){modal.classList.remove('active');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  document.querySelectorAll('[data-open-modal]').forEach(function(b){b.addEventListener('click',open);});
+  document.querySelectorAll('[data-close-modal]').forEach(function(b){b.addEventListener('click',close);});
+  modal.addEventListener('click',function(e){if(e.target===modal)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+
   var form=document.getElementById('webinarForm'),err=document.getElementById('err'),btn=document.getElementById('submitBtn');
   form.addEventListener('submit',function(e){
     var email=document.getElementById('mce-EMAIL').value.trim();
     var picked=form.querySelector('input[name="group[351967]"]:checked');
-    var okEmail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if(!okEmail||!picked){e.preventDefault();err.style.display='block';return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!picked){e.preventDefault();err.style.display='block';return;}
     err.style.display='none';btn.disabled=true;btn.textContent='SAVING YOUR SEAT...';
-    var session=picked.value==='1'?'tue':'thu';
-    setTimeout(function(){window.location.href='webinar-thank-you.html?s='+session;},1200);
+    var s=picked.value==='1'?'tue':'thu';
+    setTimeout(function(){window.location.href='webinar-thank-you.html?s='+s;},1200);
   });
 })();
 </script>

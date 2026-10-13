@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're Registered | Karen Seltz</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#faf8f3;--cream-deep:#f2ede2;--ink:#142440;--ink-soft:#324260;--teal-deep:#0f5f5a;--teal:#1fa69b;--teal-light:#7fe0d3;--muted:#5c6773;--line:rgba(20,36,64,0.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font-family:'Manrope',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:'Fraunces',serif;font-weight:600;line-height:1.15;color:var(--ink)}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+p{margin-bottom:18px;font-size:18px;color:var(--ink-soft)}
+strong{color:var(--ink)}
+.top{text-align:center;padding:48px 0 24px}
+.logo-mark{width:90px;margin:0 auto 24px;display:block}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:14px}
+h1{font-size:clamp(28px,4.6vw,40px);margin-bottom:16px}
+.alert{background:#fff;border:2px solid var(--teal-deep);border-radius:16px;padding:26px 24px;margin:28px 0;text-align:center}
+.alert h2{font-size:22px;margin-bottom:10px;color:var(--teal-deep)}
+.alert p{font-size:17px;margin:0}
+.session{background:var(--ink);color:#fff;border-radius:16px;padding:24px;text-align:center;margin-bottom:28px}
+.session .l{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);margin-bottom:6px}
+.session .t{font-family:'Fraunces',serif;font-size:24px}
+.session .z{font-size:15px;opacity:.85;margin-top:4px}
+.btn{display:inline-block;background:var(--teal-deep);color:#fff;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:.04em;padding:16px 36px;border-radius:999px;margin-top:14px}
+.btn:hover{background:var(--teal)}
+.steps{list-style:none;counter-reset:s;margin:8px 0 32px}
+.steps li{counter-increment:s;position:relative;padding-left:48px;margin-bottom:18px;font-size:17px;color:var(--ink-soft)}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--teal-deep);color:#fff;font-weight:800;text-align:center;line-height:32px;font-size:15px}
+.band{background:var(--cream-deep);padding:40px 0;text-align:center;margin-top:24px}
+footer{padding:28px 0;text-align:center;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <img class="logo-mark" src="logo.png" alt="Reboot, Rise & Receive">
+  <div class="eyebrow">You're almost in</div>
+  <h1>Your seat is saved. One more step.</h1>
+</div></div>
+
+<div class="wrap">
+  <div class="alert">
+    <h2>Check your inbox and confirm your email</h2>
+    <p>We just sent you a confirmation email. <strong>Click the link inside</strong> so your reminders and join link reach you. Not there in a few minutes? Check your Promotions or Spam folder.</p>
+  </div>
+
+  <div class="session" id="sessionBox">
+    <div class="l">Your session</div>
+    <div class="t" id="sTitle">See your confirmation email for your session</div>
+    <div class="z" id="sZone"></div>
+  </div>
+
+  <!-- EDIT: paste the real join link, then remove the hidden attribute below -->
+  <p style="text-align:center" id="joinWrap" hidden><a class="btn" href="PASTE-JOIN-LINK-HERE">JOIN THE WEBINAR</a></p>
+  <p style="text-align:center;font-size:15px;color:var(--muted)">Your join link will be in your reminder emails.</p>
+
+  <h2 style="font-size:26px;margin:36px 0 18px;text-align:center">Before the webinar</h2>
+  <ol class="steps">
+    <li><strong>Confirm your email</strong> using the link we just sent.</li>
+    <li><strong>Add the session to your calendar</strong> so you do not miss it.</li>
+    <li><strong>Come with one question.</strong> Karen will answer as many as time allows.</li>
+  </ol>
+</div>
+
+<div class="band"><div class="wrap">
+  <p style="margin:0">Can't make your session? Reply to your confirmation email and we will help you switch.</p>
+</div></div>
+
+<footer><div class="wrap">&copy; 2026 Karen Seltz. All rights reserved.</div></footer>
+
+<script>
+(function(){
+  var s=new URLSearchParams(location.search).get('s');
+  var d={tue:['Tuesday, October 27','4 p.m. MST / 7 p.m. ET'],thu:['Thursday, October 29','10 a.m. MST / 1 p.m. ET']}[s];
+  if(d){document.getElementById('sTitle').textContent=d[0];document.getElementById('sZone').textContent=d[1];}
+})();
+</script>
+</body>
+</html>

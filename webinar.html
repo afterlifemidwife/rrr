@@ -201,21 +201,20 @@ legend{font-size:14px;font-weight:700;margin-bottom:8px}
     <button class="modal-close" type="button" data-close-modal aria-label="Close">&times;</button>
     <h2 id="mTitle">Save your free seat</h2>
     <p class="sub">Choose the session that fits your schedule.</p>
-    <form id="webinarForm" action="https://whispersofgodlive.us17.list-manage.com/subscribe/post?u=c12a1c94a9adc8c53ce37cc00&amp;id=4f45027273&amp;f_id=00644ae2f0" method="post" target="hidden_iframe" novalidate>
+    <form id="webinarForm" action="https://karenseltz.us17.list-manage.com/subscribe/post?u=c12a1c94a9adc8c53ce37cc00&amp;id=17cc6bd159&amp;f_id=006a4ae2f0" method="post" target="hidden_iframe" novalidate>
       <label class="f" for="mce-FNAME">First name</label>
       <input type="text" name="FNAME" id="mce-FNAME" autocomplete="given-name">
       <label class="f" for="mce-EMAIL">Email address</label>
       <input type="email" name="EMAIL" id="mce-EMAIL" autocomplete="email" required>
       <fieldset>
         <legend>Choose your session</legend>
-        <label class="opt"><input type="radio" name="group[351967]" value="1"><span>Tuesday, October 27<small>5:00 PM Arizona / Pacific | 8:00 PM Eastern</small></span></label>
-        <label class="opt"><input type="radio" name="group[351967]" value="4"><span>Thursday, October 29<small>10:00 AM Arizona / Pacific | 1:00 PM Eastern</small></span></label>
+        <label class="opt"><input type="radio" name="group[351968]" value="1"><span>Tuesday, October 27<small>5:00 PM Arizona / Pacific | 8:00 PM Eastern</small></span></label>
+        <label class="opt"><input type="radio" name="group[351968]" value="2"><span>Thursday, October 29<small>10:00 AM Arizona / Pacific | 1:00 PM Eastern</small></span></label>
       </fieldset>
       <div class="err" id="err">Please enter a valid email and choose a session.</div>
-      <input type="hidden" name="tags" value="8334945">
-      <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_c12a1c94a9adc8c53ce37cc00_4f45027273" tabindex="-1" value=""></div>
+            <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_c12a1c94a9adc8c53ce37cc00_17cc6bd159" tabindex="-1" value=""></div>
       <button class="btn full" type="submit" id="submitBtn">SAVE MY SEAT</button>
-      <p class="fine">You will get an email asking you to confirm. Please click the link so your reminders reach you.</p>
+      <p class="fine">Your Zoom link will be emailed to you within a few minutes.</p>
     </form>
     <iframe name="hidden_iframe" style="display:none" title="submit target"></iframe>
   </div>
@@ -234,7 +233,7 @@ legend{font-size:14px;font-weight:700;margin-bottom:8px}
   var form=document.getElementById('webinarForm'),err=document.getElementById('err'),btn=document.getElementById('submitBtn');
   form.addEventListener('submit',function(e){
     var email=document.getElementById('mce-EMAIL').value.trim();
-    var picked=form.querySelector('input[name="group[351967]"]:checked');
+    var picked=form.querySelector('input[name="group[351968]"]:checked');
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!picked){e.preventDefault();err.style.display='block';return;}
     err.style.display='none';btn.disabled=true;btn.textContent='SAVING YOUR SEAT...';
     var s=picked.value==='1'?'tue':'thu';

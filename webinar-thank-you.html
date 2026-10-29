@@ -76,7 +76,7 @@ footer{padding:28px 0;text-align:center;font-size:13px;color:var(--muted)}
 <script>
 (function(){
   var s=new URLSearchParams(location.search).get('s');
-  var d={tue:['Tuesday, October 27','5:00 PM Arizona / Pacific | 8:00 PM Eastern'],thu:['Thursday, October 29','10:00 AM Arizona / Pacific | 1:00 PM Eastern']}[s];
+  var d={sat:['Saturday, October 31','12:00 PM Arizona / Pacific | 3:00 PM Eastern'],tue:['Tuesday, November 3','5:00 PM Pacific | 6:00 PM Arizona | 8:00 PM Eastern']}[s];
   if(d){document.getElementById('sTitle').textContent=d[0];document.getElementById('sZone').textContent=d[1];}
 })();
 </script>

@@ -84,7 +84,7 @@ legend{font-size:14px;font-weight:700;margin-bottom:8px}
 </head>
 <body>
 
-<div class="banner">Free live webinar. Choose <strong>Tue Oct 27</strong> or <strong>Thu Oct 29</strong>.</div>
+<div class="banner">Free live webinar. Choose <strong>Sat Oct 31</strong> or <strong>Tue Nov 3</strong>.</div>
 
 <section class="hero">
   <div class="wrap">
@@ -93,7 +93,7 @@ legend{font-size:14px;font-weight:700;margin-bottom:8px}
     <h1>Why You&rsquo;re Still Undercharging, Overdelivering &amp; Holding Back</h1>
     <p class="lede">The hidden reason smart, heart-centered women struggle to be fully visible, make the offer, charge what they&rsquo;re worth, and receive more money.</p>
     <button class="btn" type="button" data-open-modal>YES! SAVE MY FREE SEAT</button>
-    <div class="sess-pill">Tue Oct 27 &nbsp;|&nbsp; Thu Oct 29</div>
+    <div class="sess-pill">Sat Oct 31 &nbsp;|&nbsp; Tue Nov 3</div>
   </div>
 </section>
 
@@ -148,8 +148,8 @@ legend{font-size:14px;font-weight:700;margin-bottom:8px}
   <div class="wrap center">
     <h2 class="sec">Choose Your Free Live Session</h2>
     <div class="sessions">
-      <div class="sess"><div class="d">Tuesday, October 27, 2026</div><div class="t">5:00 PM Arizona / Pacific &nbsp;|&nbsp; 8:00 PM Eastern</div></div>
-      <div class="sess"><div class="d">Thursday, October 29, 2026</div><div class="t">10:00 AM Arizona / Pacific &nbsp;|&nbsp; 1:00 PM Eastern</div></div>
+      <div class="sess"><div class="d">Saturday, October 31, 2026</div><div class="t">12:00 PM Arizona / Pacific &nbsp;|&nbsp; 3:00 PM Eastern</div></div>
+      <div class="sess"><div class="d">Tuesday, November 3, 2026</div><div class="t">5:00 PM Pacific &nbsp;|&nbsp; 6:00 PM Arizona &nbsp;|&nbsp; 8:00 PM Eastern</div></div>
     </div>
     <button class="btn" type="button" data-open-modal>YES! SAVE MY FREE SEAT</button>
   </div>
@@ -208,8 +208,8 @@ legend{font-size:14px;font-weight:700;margin-bottom:8px}
       <input type="email" name="EMAIL" id="mce-EMAIL" autocomplete="email" required>
       <fieldset>
         <legend>Choose your session</legend>
-        <label class="opt"><input type="radio" name="group[351968]" value="1"><span>Tuesday, October 27<small>5:00 PM Arizona / Pacific | 8:00 PM Eastern</small></span></label>
-        <label class="opt"><input type="radio" name="group[351968]" value="2"><span>Thursday, October 29<small>10:00 AM Arizona / Pacific | 1:00 PM Eastern</small></span></label>
+        <label class="opt"><input type="radio" name="group[351968]" value="4"><span>Saturday, October 31<small>12:00 PM Arizona / Pacific | 3:00 PM Eastern</small></span></label>
+        <label class="opt"><input type="radio" name="group[351968]" value="8"><span>Tuesday, November 3<small>5:00 PM Pacific | 6:00 PM Arizona | 8:00 PM Eastern</small></span></label>
       </fieldset>
       <div class="err" id="err">Please enter a valid email and choose a session.</div>
             <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_c12a1c94a9adc8c53ce37cc00_17cc6bd159" tabindex="-1" value=""></div>
@@ -236,7 +236,7 @@ legend{font-size:14px;font-weight:700;margin-bottom:8px}
     var picked=form.querySelector('input[name="group[351968]"]:checked');
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!picked){e.preventDefault();err.style.display='block';return;}
     err.style.display='none';btn.disabled=true;btn.textContent='SAVING YOUR SEAT...';
-    var s=picked.value==='1'?'tue':'thu';
+    var s=picked.value==='4'?'sat':'tue';
     setTimeout(function(){window.location.href='webinar-thank-you.html?s='+s;},1200);
   });
 })();
